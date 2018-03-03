@@ -1,23 +1,12 @@
 var dirHtmlList = require('dir-html-list')
+var dir = process.cwd()
 
-// of course undefined fix it
-// What's wrong mr reducer? How to reference incoming arrays?
-
-function reducer (array) {
-   array.reduce(function (acc, cur, index) {
-   acc[index] = cur
-   return acc
-  }, {})
+var reducer = function(acc, cur, index){
+  acc[cur] = cur
+  return acc
 }
 
-function dirHtmlPath(dir, callback){
-  dirHtmlList(dir, function (err, data) {
-    if (err) return callback(err)
-    callback(null, data)
-    })
-}
-
-module.exports = dirHtmlPath
-// module.exports = reducer
-// function dirHtmlPath
-// module.exports = dirHtmlList
+dirHtmlList(dir, function (err, data) {
+  if (err) throw err
+  console.log(data.reduce(reducer, {}))
+})
