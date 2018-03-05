@@ -4,7 +4,7 @@
   "description": "Get absolute path of html files in current directory",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "tape test.js"
   },
   "repository": {
     "type": "git",

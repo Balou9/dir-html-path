@@ -1,4 +1,6 @@
 var dirHtmlList = require('dir-html-list')
+// getAbsPath
+var path = require('path')
 var dir = process.cwd()
 
 var reducer = function(acc, cur, index){
@@ -8,5 +10,8 @@ var reducer = function(acc, cur, index){
 
 dirHtmlList(dir, function (err, data) {
   if (err) throw err
+  console.log(data)
   console.log(data.reduce(reducer, {}))
 })
+
+// module.exports = dirHtmlPath
