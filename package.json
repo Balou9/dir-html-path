@@ -1,7 +1,7 @@
 {
   "name": "dir-html-path",
-  "version": "0.0.1",
-  "description": "Get absolute path of html files in current directory",
+  "version": "1.0.0",
+  "description": "Get absolute path of html files in given directory",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Balou9/dir-html-path#readme",
   "dependencies": {
     "dir-html-list": "^1.0.0",
+    "get-abs-path": "^1.1.0",
     "tape": "^4.9.0"
   }
 }
